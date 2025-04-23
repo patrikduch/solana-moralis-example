@@ -1,5 +1,5 @@
 use actix_web::{test, web, App, http::StatusCode};
-use rust_be_template::routes;
+use solana_moralis_example::routes;
 
 #[actix_web::test]
 async fn test_index_returns_200() {
