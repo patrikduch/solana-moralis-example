@@ -1,0 +1,36 @@
+[package]
+name = "solana-moralis-example"
+version = "1.0.0"
+edition = "2021"
+authors = ["Patrik Duch <duchpatrik@icloud.com"]
+
+# Add lib configuration to expose your code as a library
+[lib]
+path = "src/lib.rs"
+
+[[bin]]
+name = "solana-moralis-example"
+path = "src/main.rs"
+
+[features]
+default = []
+
+[dependencies]
+actix-web = "4.0"
+serde = { version = "1.0", features = ["derive"] }
+dotenv = "0.15"
+lazy_static = "1.4"
+futures = "0.3"
+log = "0.4"
+env_logger = "0.10"
+openssl = { version = "0.10", features = ["vendored"] }
+
+# Async runtime
+tokio = { version = "1", features = ["full"] }
+
+# SQLx for PostgreSQL
+sqlx = { version = "0.7", features = ["postgres", "runtime-tokio-native-tls", "macros"] }
+
+[dev-dependencies]
+# Add these for testing
+actix-rt = "2.8"
