@@ -1,4 +1,5 @@
 mod controllers;
+mod dtos;
 mod models;
 mod routes;
 mod db;
