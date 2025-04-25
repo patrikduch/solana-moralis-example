@@ -2,8 +2,8 @@ version: '3.8'
 
 services:
   postgres:
-    image: postgres:latest
-    container_name: rust-postgres
+    image: timescale/timescaledb:latest-pg14 # You can change this to a specific version
+    container_name: rust-timescaledb
     restart: always
     ports:
       - "${POSTGRES_PORT}:5432"
