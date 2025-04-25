@@ -76,3 +76,46 @@ curl -X PUT http://localhost/api/users/1 \
      -H "Content-Type: application/json" \
      -d '{"name": "Updated Charlie", "email": "new-charlie@example.com"}'
 ```
+
+
+### 6. Example Usage – Moralis Token Price API
+
+#### Get SOL Price (USD)
+
+Returns the current price of SOL in USD.
+
+```sh
+curl http://localhost/api/moralis/sol-price
+```
+
+Example response:
+
+```json
+{
+  "usd_price": 152.45
+}
+```
+
+---
+
+#### Get Token Price by Address
+
+Returns the current price of a token (by its Solana address) in USD.
+
+```sh
+curl http://localhost/api/moralis/token-price/<TOKEN_ADDRESS>
+```
+
+Replace `<TOKEN_ADDRESS>` with the actual token address. For example:
+
+```sh
+curl http://localhost/api/moralis/token-price/Es9vMFrzaCERoXcspv3z5kzpGbBCtF1PphhrybX9t9dX
+```
+
+Example response:
+
+```json
+{
+  "usd_price": 1.00
+}
+```
