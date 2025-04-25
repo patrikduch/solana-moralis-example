@@ -24,5 +24,6 @@ pub fn configure_routes(cfg: &mut web::ServiceConfig) {
         web::scope("/api")
             .route("/ip", web::get().to(ip_controller::get_ip))
             .route("/sol-price", web::get().to(MoralisController::get_sol_price))
+            .route("/token-price/{token}", web::get().to(MoralisController::get_token_price)),
     );
 }
